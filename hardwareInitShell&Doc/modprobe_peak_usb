@@ -1,0 +1,10 @@
+#! /bin/bash
+#This is a script for rm unneed module and modprobe pcan_usb module.
+date
+who
+sudo rmmod pcan
+sudo rmmod vcan
+sudo modprobe peak_usb
+sudo ip link set can0 up type can bitrate 500000
+date
+who
